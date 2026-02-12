@@ -1,0 +1,21 @@
+[workspace]
+members = ["covk", "covk_sys"]
+resolver = "3"
+
+[profile.release]
+lto = true
+
+[workspace.dependencies]
+covk_sys = { path = "./covk_sys" }
+libloading = { version = "0.9" }
+anyhow = "1"
+winit = { version = "0.30", features = ["rwh_06"] }
+raw-window-handle = "0.6"
+log = "0.4"
+env_logger = "0.11"
+zstd = "0.13"
+basis-universal = "0.3"
+gpu-allocator = { version = "0.28.0", default-features = false, features = ["std", "vulkan"] }
+ash = {version = "0.38.0", default-features = false, features = ["debug", "std"] }
+glam = "0.32"
+uuid = "1"

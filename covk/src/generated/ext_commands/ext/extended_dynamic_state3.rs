@@ -1,0 +1,1035 @@
+﻿// generated file, do not modify manually
+#![allow(unused_qualifications)]
+#![allow(mismatched_lifetime_syntaxes)]
+use crate::sys;
+use crate::sys::ffi::*;
+use crate::vk::*;
+use crate::vk;
+use crate::{Abi, Vk, Sys};
+
+/// `VK_EXT_extended_dynamic_state3` DeviceCommands
+#[derive(Debug, Clone, Copy)]
+pub struct Device(pub sys::ext::extended_dynamic_state3::DeviceCommands);
+
+impl Device {
+    pub fn load(get: impl FnMut(&::core::ffi::CStr) -> Option<crate::ProcAddr>) -> Self {
+        Self(unsafe { sys::ext::extended_dynamic_state3::DeviceCommands::load(get) })
+    }
+}
+
+impl Device {
+    /// ```c
+    /// void vkCmdSetAlphaToCoverageEnableEXT(VkCommandBuffer commandBuffer, VkBool32 alphaToCoverageEnable)
+    /// ```
+    pub unsafe fn cmd_set_alpha_to_coverage_enable(
+        &self,
+        command_buffer: vk::CommandBuffer,
+        alpha_to_coverage_enable: bool,
+    ) -> () {
+        unsafe {
+            self.0.CmdSetAlphaToCoverageEnableEXT(
+                command_buffer.abi(), 
+                alpha_to_coverage_enable.abi(), 
+            );
+        }
+    }
+    /// ```c
+    /// void vkCmdSetAlphaToOneEnableEXT(VkCommandBuffer commandBuffer, VkBool32 alphaToOneEnable)
+    /// ```
+    pub unsafe fn cmd_set_alpha_to_one_enable(
+        &self,
+        command_buffer: vk::CommandBuffer,
+        alpha_to_one_enable: bool,
+    ) -> () {
+        unsafe {
+            self.0.CmdSetAlphaToOneEnableEXT(
+                command_buffer.abi(), 
+                alpha_to_one_enable.abi(), 
+            );
+        }
+    }
+    /// ```c
+    /// void vkCmdSetColorBlendAdvancedEXT(VkCommandBuffer commandBuffer, uint32_t firstAttachment, uint32_t attachmentCount, VkColorBlendAdvancedEXT const* pColorBlendAdvanced)
+    /// ```
+    pub unsafe fn cmd_set_color_blend_advanced(
+        &self,
+        command_buffer: vk::CommandBuffer,
+        first_attachment: uint32_t,
+        color_blend_advanced: &[ColorBlendAdvancedEXT],
+    ) -> () {
+        unsafe {
+            self.0.CmdSetColorBlendAdvancedEXT(
+                command_buffer.abi(), 
+                first_attachment.abi(), 
+                color_blend_advanced.len() as _, 
+                color_blend_advanced.abi(), 
+            );
+        }
+    }
+    /// ```c
+    /// void vkCmdSetColorBlendEnableEXT(VkCommandBuffer commandBuffer, uint32_t firstAttachment, uint32_t attachmentCount, VkBool32 const* pColorBlendEnables)
+    /// ```
+    pub unsafe fn cmd_set_color_blend_enable(
+        &self,
+        command_buffer: vk::CommandBuffer,
+        first_attachment: uint32_t,
+        color_blend_enables: &[Bool],
+    ) -> () {
+        unsafe {
+            self.0.CmdSetColorBlendEnableEXT(
+                command_buffer.abi(), 
+                first_attachment.abi(), 
+                color_blend_enables.len() as _, 
+                color_blend_enables.abi(), 
+            );
+        }
+    }
+    /// ```c
+    /// void vkCmdSetColorBlendEquationEXT(VkCommandBuffer commandBuffer, uint32_t firstAttachment, uint32_t attachmentCount, VkColorBlendEquationEXT const* pColorBlendEquations)
+    /// ```
+    pub unsafe fn cmd_set_color_blend_equation(
+        &self,
+        command_buffer: vk::CommandBuffer,
+        first_attachment: uint32_t,
+        color_blend_equations: &[ColorBlendEquationEXT],
+    ) -> () {
+        unsafe {
+            self.0.CmdSetColorBlendEquationEXT(
+                command_buffer.abi(), 
+                first_attachment.abi(), 
+                color_blend_equations.len() as _, 
+                color_blend_equations.abi(), 
+            );
+        }
+    }
+    /// ```c
+    /// void vkCmdSetColorWriteMaskEXT(VkCommandBuffer commandBuffer, uint32_t firstAttachment, uint32_t attachmentCount, VkColorComponentFlags const* pColorWriteMasks)
+    /// ```
+    pub unsafe fn cmd_set_color_write_mask(
+        &self,
+        command_buffer: vk::CommandBuffer,
+        first_attachment: uint32_t,
+        color_write_masks: &[ColorComponentFlags],
+    ) -> () {
+        unsafe {
+            self.0.CmdSetColorWriteMaskEXT(
+                command_buffer.abi(), 
+                first_attachment.abi(), 
+                color_write_masks.len() as _, 
+                color_write_masks.abi(), 
+            );
+        }
+    }
+    /// ```c
+    /// void vkCmdSetConservativeRasterizationModeEXT(VkCommandBuffer commandBuffer, VkConservativeRasterizationModeEXT conservativeRasterizationMode)
+    /// ```
+    pub unsafe fn cmd_set_conservative_rasterization_mode(
+        &self,
+        command_buffer: vk::CommandBuffer,
+        conservative_rasterization_mode: ConservativeRasterizationModeEXT,
+    ) -> () {
+        unsafe {
+            self.0.CmdSetConservativeRasterizationModeEXT(
+                command_buffer.abi(), 
+                conservative_rasterization_mode.abi(), 
+            );
+        }
+    }
+    /// ```c
+    /// void vkCmdSetCoverageModulationModeNV(VkCommandBuffer commandBuffer, VkCoverageModulationModeNV coverageModulationMode)
+    /// ```
+    pub unsafe fn cmd_set_coverage_modulation_mode_nv(
+        &self,
+        command_buffer: vk::CommandBuffer,
+        coverage_modulation_mode: CoverageModulationModeNV,
+    ) -> () {
+        unsafe {
+            self.0.CmdSetCoverageModulationModeNV(
+                command_buffer.abi(), 
+                coverage_modulation_mode.abi(), 
+            );
+        }
+    }
+    /// ```c
+    /// void vkCmdSetCoverageModulationTableEnableNV(VkCommandBuffer commandBuffer, VkBool32 coverageModulationTableEnable)
+    /// ```
+    pub unsafe fn cmd_set_coverage_modulation_table_enable_nv(
+        &self,
+        command_buffer: vk::CommandBuffer,
+        coverage_modulation_table_enable: bool,
+    ) -> () {
+        unsafe {
+            self.0.CmdSetCoverageModulationTableEnableNV(
+                command_buffer.abi(), 
+                coverage_modulation_table_enable.abi(), 
+            );
+        }
+    }
+    /// ```c
+    /// void vkCmdSetCoverageModulationTableNV(VkCommandBuffer commandBuffer, uint32_t coverageModulationTableCount, float const* pCoverageModulationTable)
+    /// ```
+    pub unsafe fn cmd_set_coverage_modulation_table_nv(
+        &self,
+        command_buffer: vk::CommandBuffer,
+        coverage_modulation_table: &[float],
+    ) -> () {
+        unsafe {
+            self.0.CmdSetCoverageModulationTableNV(
+                command_buffer.abi(), 
+                coverage_modulation_table.len() as _, 
+                coverage_modulation_table.abi(), 
+            );
+        }
+    }
+    /// ```c
+    /// void vkCmdSetCoverageReductionModeNV(VkCommandBuffer commandBuffer, VkCoverageReductionModeNV coverageReductionMode)
+    /// ```
+    pub unsafe fn cmd_set_coverage_reduction_mode_nv(
+        &self,
+        command_buffer: vk::CommandBuffer,
+        coverage_reduction_mode: CoverageReductionModeNV,
+    ) -> () {
+        unsafe {
+            self.0.CmdSetCoverageReductionModeNV(
+                command_buffer.abi(), 
+                coverage_reduction_mode.abi(), 
+            );
+        }
+    }
+    /// ```c
+    /// void vkCmdSetCoverageToColorEnableNV(VkCommandBuffer commandBuffer, VkBool32 coverageToColorEnable)
+    /// ```
+    pub unsafe fn cmd_set_coverage_to_color_enable_nv(
+        &self,
+        command_buffer: vk::CommandBuffer,
+        coverage_to_color_enable: bool,
+    ) -> () {
+        unsafe {
+            self.0.CmdSetCoverageToColorEnableNV(
+                command_buffer.abi(), 
+                coverage_to_color_enable.abi(), 
+            );
+        }
+    }
+    /// ```c
+    /// void vkCmdSetCoverageToColorLocationNV(VkCommandBuffer commandBuffer, uint32_t coverageToColorLocation)
+    /// ```
+    pub unsafe fn cmd_set_coverage_to_color_location_nv(
+        &self,
+        command_buffer: vk::CommandBuffer,
+        coverage_to_color_location: uint32_t,
+    ) -> () {
+        unsafe {
+            self.0.CmdSetCoverageToColorLocationNV(
+                command_buffer.abi(), 
+                coverage_to_color_location.abi(), 
+            );
+        }
+    }
+    /// ```c
+    /// void vkCmdSetDepthClampEnableEXT(VkCommandBuffer commandBuffer, VkBool32 depthClampEnable)
+    /// ```
+    pub unsafe fn cmd_set_depth_clamp_enable(
+        &self,
+        command_buffer: vk::CommandBuffer,
+        depth_clamp_enable: bool,
+    ) -> () {
+        unsafe {
+            self.0.CmdSetDepthClampEnableEXT(
+                command_buffer.abi(), 
+                depth_clamp_enable.abi(), 
+            );
+        }
+    }
+    /// ```c
+    /// void vkCmdSetDepthClipEnableEXT(VkCommandBuffer commandBuffer, VkBool32 depthClipEnable)
+    /// ```
+    pub unsafe fn cmd_set_depth_clip_enable(
+        &self,
+        command_buffer: vk::CommandBuffer,
+        depth_clip_enable: bool,
+    ) -> () {
+        unsafe {
+            self.0.CmdSetDepthClipEnableEXT(
+                command_buffer.abi(), 
+                depth_clip_enable.abi(), 
+            );
+        }
+    }
+    /// ```c
+    /// void vkCmdSetDepthClipNegativeOneToOneEXT(VkCommandBuffer commandBuffer, VkBool32 negativeOneToOne)
+    /// ```
+    pub unsafe fn cmd_set_depth_clip_negative_one_to_one(
+        &self,
+        command_buffer: vk::CommandBuffer,
+        negative_one_to_one: bool,
+    ) -> () {
+        unsafe {
+            self.0.CmdSetDepthClipNegativeOneToOneEXT(
+                command_buffer.abi(), 
+                negative_one_to_one.abi(), 
+            );
+        }
+    }
+    /// ```c
+    /// void vkCmdSetExtraPrimitiveOverestimationSizeEXT(VkCommandBuffer commandBuffer, float extraPrimitiveOverestimationSize)
+    /// ```
+    pub unsafe fn cmd_set_extra_primitive_overestimation_size(
+        &self,
+        command_buffer: vk::CommandBuffer,
+        extra_primitive_overestimation_size: float,
+    ) -> () {
+        unsafe {
+            self.0.CmdSetExtraPrimitiveOverestimationSizeEXT(
+                command_buffer.abi(), 
+                extra_primitive_overestimation_size.abi(), 
+            );
+        }
+    }
+    /// ```c
+    /// void vkCmdSetLineRasterizationModeEXT(VkCommandBuffer commandBuffer, VkLineRasterizationModeEXT lineRasterizationMode)
+    /// ```
+    pub unsafe fn cmd_set_line_rasterization_mode(
+        &self,
+        command_buffer: vk::CommandBuffer,
+        line_rasterization_mode: LineRasterizationModeEXT,
+    ) -> () {
+        unsafe {
+            self.0.CmdSetLineRasterizationModeEXT(
+                command_buffer.abi(), 
+                line_rasterization_mode.abi(), 
+            );
+        }
+    }
+    /// ```c
+    /// void vkCmdSetLineStippleEnableEXT(VkCommandBuffer commandBuffer, VkBool32 stippledLineEnable)
+    /// ```
+    pub unsafe fn cmd_set_line_stipple_enable(
+        &self,
+        command_buffer: vk::CommandBuffer,
+        stippled_line_enable: bool,
+    ) -> () {
+        unsafe {
+            self.0.CmdSetLineStippleEnableEXT(
+                command_buffer.abi(), 
+                stippled_line_enable.abi(), 
+            );
+        }
+    }
+    /// ```c
+    /// void vkCmdSetLogicOpEnableEXT(VkCommandBuffer commandBuffer, VkBool32 logicOpEnable)
+    /// ```
+    pub unsafe fn cmd_set_logic_op_enable(
+        &self,
+        command_buffer: vk::CommandBuffer,
+        logic_op_enable: bool,
+    ) -> () {
+        unsafe {
+            self.0.CmdSetLogicOpEnableEXT(
+                command_buffer.abi(), 
+                logic_op_enable.abi(), 
+            );
+        }
+    }
+    /// ```c
+    /// void vkCmdSetPolygonModeEXT(VkCommandBuffer commandBuffer, VkPolygonMode polygonMode)
+    /// ```
+    pub unsafe fn cmd_set_polygon_mode(
+        &self,
+        command_buffer: vk::CommandBuffer,
+        polygon_mode: PolygonMode,
+    ) -> () {
+        unsafe {
+            self.0.CmdSetPolygonModeEXT(
+                command_buffer.abi(), 
+                polygon_mode.abi(), 
+            );
+        }
+    }
+    /// ```c
+    /// void vkCmdSetProvokingVertexModeEXT(VkCommandBuffer commandBuffer, VkProvokingVertexModeEXT provokingVertexMode)
+    /// ```
+    pub unsafe fn cmd_set_provoking_vertex_mode(
+        &self,
+        command_buffer: vk::CommandBuffer,
+        provoking_vertex_mode: ProvokingVertexModeEXT,
+    ) -> () {
+        unsafe {
+            self.0.CmdSetProvokingVertexModeEXT(
+                command_buffer.abi(), 
+                provoking_vertex_mode.abi(), 
+            );
+        }
+    }
+    /// ```c
+    /// void vkCmdSetRasterizationSamplesEXT(VkCommandBuffer commandBuffer, VkSampleCountFlagBits rasterizationSamples)
+    /// ```
+    pub unsafe fn cmd_set_rasterization_samples(
+        &self,
+        command_buffer: vk::CommandBuffer,
+        rasterization_samples: SampleCountFlags,
+    ) -> () {
+        unsafe {
+            self.0.CmdSetRasterizationSamplesEXT(
+                command_buffer.abi(), 
+                rasterization_samples.abi(), 
+            );
+        }
+    }
+    /// ```c
+    /// void vkCmdSetRasterizationStreamEXT(VkCommandBuffer commandBuffer, uint32_t rasterizationStream)
+    /// ```
+    pub unsafe fn cmd_set_rasterization_stream(
+        &self,
+        command_buffer: vk::CommandBuffer,
+        rasterization_stream: uint32_t,
+    ) -> () {
+        unsafe {
+            self.0.CmdSetRasterizationStreamEXT(
+                command_buffer.abi(), 
+                rasterization_stream.abi(), 
+            );
+        }
+    }
+    /// ```c
+    /// void vkCmdSetRepresentativeFragmentTestEnableNV(VkCommandBuffer commandBuffer, VkBool32 representativeFragmentTestEnable)
+    /// ```
+    pub unsafe fn cmd_set_representative_fragment_test_enable_nv(
+        &self,
+        command_buffer: vk::CommandBuffer,
+        representative_fragment_test_enable: bool,
+    ) -> () {
+        unsafe {
+            self.0.CmdSetRepresentativeFragmentTestEnableNV(
+                command_buffer.abi(), 
+                representative_fragment_test_enable.abi(), 
+            );
+        }
+    }
+    /// ```c
+    /// void vkCmdSetSampleLocationsEnableEXT(VkCommandBuffer commandBuffer, VkBool32 sampleLocationsEnable)
+    /// ```
+    pub unsafe fn cmd_set_sample_locations_enable(
+        &self,
+        command_buffer: vk::CommandBuffer,
+        sample_locations_enable: bool,
+    ) -> () {
+        unsafe {
+            self.0.CmdSetSampleLocationsEnableEXT(
+                command_buffer.abi(), 
+                sample_locations_enable.abi(), 
+            );
+        }
+    }
+    /// ```c
+    /// void vkCmdSetSampleMaskEXT(VkCommandBuffer commandBuffer, VkSampleCountFlagBits samples, VkSampleMask const* pSampleMask)
+    /// ```
+    pub unsafe fn cmd_set_sample_mask(
+        &self,
+        command_buffer: vk::CommandBuffer,
+        samples: SampleCountFlags,
+        sample_mask: *const SampleMask,
+    ) -> () {
+        unsafe {
+            self.0.CmdSetSampleMaskEXT(
+                command_buffer.abi(), 
+                samples.abi(), 
+                sample_mask.abi(), 
+            );
+        }
+    }
+    /// ```c
+    /// void vkCmdSetShadingRateImageEnableNV(VkCommandBuffer commandBuffer, VkBool32 shadingRateImageEnable)
+    /// ```
+    pub unsafe fn cmd_set_shading_rate_image_enable_nv(
+        &self,
+        command_buffer: vk::CommandBuffer,
+        shading_rate_image_enable: bool,
+    ) -> () {
+        unsafe {
+            self.0.CmdSetShadingRateImageEnableNV(
+                command_buffer.abi(), 
+                shading_rate_image_enable.abi(), 
+            );
+        }
+    }
+    /// ```c
+    /// void vkCmdSetTessellationDomainOriginEXT(VkCommandBuffer commandBuffer, VkTessellationDomainOrigin domainOrigin)
+    /// ```
+    pub unsafe fn cmd_set_tessellation_domain_origin(
+        &self,
+        command_buffer: vk::CommandBuffer,
+        domain_origin: TessellationDomainOrigin,
+    ) -> () {
+        unsafe {
+            self.0.CmdSetTessellationDomainOriginEXT(
+                command_buffer.abi(), 
+                domain_origin.abi(), 
+            );
+        }
+    }
+    /// ```c
+    /// void vkCmdSetViewportSwizzleNV(VkCommandBuffer commandBuffer, uint32_t firstViewport, uint32_t viewportCount, VkViewportSwizzleNV const* pViewportSwizzles)
+    /// ```
+    pub unsafe fn cmd_set_viewport_swizzle_nv(
+        &self,
+        command_buffer: vk::CommandBuffer,
+        first_viewport: uint32_t,
+        viewport_swizzles: &[ViewportSwizzleNV],
+    ) -> () {
+        unsafe {
+            self.0.CmdSetViewportSwizzleNV(
+                command_buffer.abi(), 
+                first_viewport.abi(), 
+                viewport_swizzles.len() as _, 
+                viewport_swizzles.abi(), 
+            );
+        }
+    }
+    /// ```c
+    /// void vkCmdSetViewportWScalingEnableNV(VkCommandBuffer commandBuffer, VkBool32 viewportWScalingEnable)
+    /// ```
+    pub unsafe fn cmd_set_viewport_w_scaling_enable_nv(
+        &self,
+        command_buffer: vk::CommandBuffer,
+        viewport_w_scaling_enable: bool,
+    ) -> () {
+        unsafe {
+            self.0.CmdSetViewportWScalingEnableNV(
+                command_buffer.abi(), 
+                viewport_w_scaling_enable.abi(), 
+            );
+        }
+    }
+}
+
+impl crate::CommandScope<vk::Device> for vk::extensions::ext::extended_dynamic_state3 {
+    type Commands = Device;
+}
+
+/// Device object
+pub trait ExtExtendedDynamicState3Device {
+    fn raw(&self) -> vk::Device;
+    fn commands(&self) -> &Device;
+
+}
+
+impl crate::HndScope<vk::Device> for vk::extensions::ext::extended_dynamic_state3 {
+    type Impl = _hs_Device::Device;
+}
+
+mod _hs_Device {
+    use super::*;
+    #[derive(Debug)]
+    pub struct Device(pub(crate) ::alloc::sync::Arc<super::Device>, pub(crate) crate::hnd::Device<vk::core>);
+
+    impl Clone for Device {
+        fn clone(&self) -> Self { Self(self.0.clone(), self.1.clone()) }
+    }
+
+    impl crate::hnd::Device<vk::extensions::ext::extended_dynamic_state3> {
+        pub unsafe fn new(base: &crate::hnd::Device<vk::core>) -> Self {
+            unsafe {
+                Self(Device(
+                   ::alloc::sync::Arc::new(super::Device::load(|name| unsafe { base.get_proc_addr(name) })),
+                   base.clone(),
+                ))
+            }
+        }
+    }
+
+    impl crate::Extension<crate::hnd::Device<vk::core>> for vk::extensions::ext::extended_dynamic_state3 {
+        type Output = crate::hnd::Device<vk::extensions::ext::extended_dynamic_state3>;
+        unsafe fn make(target: &crate::hnd::Device<vk::core>) -> Self::Output {
+            unsafe { crate::hnd::Device::<vk::extensions::ext::extended_dynamic_state3>::new(target) }
+        }
+    }
+
+    impl crate::hnd::Device<vk::extensions::ext::extended_dynamic_state3> {
+        pub fn raw(&self) -> vk::Device { self.0.1.raw() }
+        pub fn commands(&self) -> &::alloc::sync::Arc<super::Device> { &self.0.0 }
+        pub fn core(&self) -> &crate::hnd::Device<vk::core> { &self.0.1 }
+    }
+
+    impl ::core::fmt::Debug for crate::hnd::Device<vk::extensions::ext::extended_dynamic_state3> {
+        fn fmt(&self, f: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
+            f.write_fmt(format_args!("Device({:p})", self.raw()))
+        }
+    }
+
+    impl ::core::fmt::Pointer for crate::hnd::Device<vk::extensions::ext::extended_dynamic_state3> {
+        fn fmt(&self, f: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
+            self.raw().fmt(f)
+        }
+    }
+
+    impl ::core::ops::Deref for crate::hnd::Device<vk::extensions::ext::extended_dynamic_state3> {
+        type Target = super::Device;
+        fn deref(&self) -> &Self::Target { self.commands() }
+    }
+
+    impl super::ExtExtendedDynamicState3Device for crate::hnd::Device<vk::extensions::ext::extended_dynamic_state3> {
+        fn raw(&self) -> vk::Device { self.raw() }
+        fn commands(&self) -> &super::Device { self.commands() }
+    }
+
+    impl crate::HndCtx<vk::extensions::ext::extended_dynamic_state3, vk::Device> for crate::hnd::Device<vk::extensions::ext::extended_dynamic_state3> {
+        type Ctx = Self;
+        fn ctx(&self) -> Self::Ctx { self.clone() }
+        fn raw(&self) -> vk::Device { self.raw() }
+        fn commands(&self) -> &::alloc::sync::Arc<super::Device> { self.commands() }
+    }
+}
+
+/// CommandBuffer object
+pub trait ExtExtendedDynamicState3CommandBuffer {
+    fn raw(&self) -> vk::CommandBuffer;
+    fn commands(&self) -> &Device;
+
+    /// ```c
+    /// void vkCmdSetAlphaToCoverageEnableEXT(VkCommandBuffer commandBuffer, VkBool32 alphaToCoverageEnable)
+    /// ```
+    unsafe fn set_alpha_to_coverage_enable(
+        &self,
+        alpha_to_coverage_enable: bool,
+    ) -> () {
+        unsafe {
+            self.commands().cmd_set_alpha_to_coverage_enable(
+                self.raw(),
+                alpha_to_coverage_enable,
+            )
+        }
+    }
+    /// ```c
+    /// void vkCmdSetAlphaToOneEnableEXT(VkCommandBuffer commandBuffer, VkBool32 alphaToOneEnable)
+    /// ```
+    unsafe fn set_alpha_to_one_enable(
+        &self,
+        alpha_to_one_enable: bool,
+    ) -> () {
+        unsafe {
+            self.commands().cmd_set_alpha_to_one_enable(
+                self.raw(),
+                alpha_to_one_enable,
+            )
+        }
+    }
+    /// ```c
+    /// void vkCmdSetColorBlendAdvancedEXT(VkCommandBuffer commandBuffer, uint32_t firstAttachment, uint32_t attachmentCount, VkColorBlendAdvancedEXT const* pColorBlendAdvanced)
+    /// ```
+    unsafe fn set_color_blend_advanced(
+        &self,
+        first_attachment: uint32_t,
+        color_blend_advanced: &[ColorBlendAdvancedEXT],
+    ) -> () {
+        unsafe {
+            self.commands().cmd_set_color_blend_advanced(
+                self.raw(),
+                first_attachment,
+                color_blend_advanced,
+            )
+        }
+    }
+    /// ```c
+    /// void vkCmdSetColorBlendEnableEXT(VkCommandBuffer commandBuffer, uint32_t firstAttachment, uint32_t attachmentCount, VkBool32 const* pColorBlendEnables)
+    /// ```
+    unsafe fn set_color_blend_enable(
+        &self,
+        first_attachment: uint32_t,
+        color_blend_enables: &[Bool],
+    ) -> () {
+        unsafe {
+            self.commands().cmd_set_color_blend_enable(
+                self.raw(),
+                first_attachment,
+                color_blend_enables,
+            )
+        }
+    }
+    /// ```c
+    /// void vkCmdSetColorBlendEquationEXT(VkCommandBuffer commandBuffer, uint32_t firstAttachment, uint32_t attachmentCount, VkColorBlendEquationEXT const* pColorBlendEquations)
+    /// ```
+    unsafe fn set_color_blend_equation(
+        &self,
+        first_attachment: uint32_t,
+        color_blend_equations: &[ColorBlendEquationEXT],
+    ) -> () {
+        unsafe {
+            self.commands().cmd_set_color_blend_equation(
+                self.raw(),
+                first_attachment,
+                color_blend_equations,
+            )
+        }
+    }
+    /// ```c
+    /// void vkCmdSetColorWriteMaskEXT(VkCommandBuffer commandBuffer, uint32_t firstAttachment, uint32_t attachmentCount, VkColorComponentFlags const* pColorWriteMasks)
+    /// ```
+    unsafe fn set_color_write_mask(
+        &self,
+        first_attachment: uint32_t,
+        color_write_masks: &[ColorComponentFlags],
+    ) -> () {
+        unsafe {
+            self.commands().cmd_set_color_write_mask(
+                self.raw(),
+                first_attachment,
+                color_write_masks,
+            )
+        }
+    }
+    /// ```c
+    /// void vkCmdSetConservativeRasterizationModeEXT(VkCommandBuffer commandBuffer, VkConservativeRasterizationModeEXT conservativeRasterizationMode)
+    /// ```
+    unsafe fn set_conservative_rasterization_mode(
+        &self,
+        conservative_rasterization_mode: ConservativeRasterizationModeEXT,
+    ) -> () {
+        unsafe {
+            self.commands().cmd_set_conservative_rasterization_mode(
+                self.raw(),
+                conservative_rasterization_mode,
+            )
+        }
+    }
+    /// ```c
+    /// void vkCmdSetCoverageModulationModeNV(VkCommandBuffer commandBuffer, VkCoverageModulationModeNV coverageModulationMode)
+    /// ```
+    unsafe fn set_coverage_modulation_mode_nv(
+        &self,
+        coverage_modulation_mode: CoverageModulationModeNV,
+    ) -> () {
+        unsafe {
+            self.commands().cmd_set_coverage_modulation_mode_nv(
+                self.raw(),
+                coverage_modulation_mode,
+            )
+        }
+    }
+    /// ```c
+    /// void vkCmdSetCoverageModulationTableEnableNV(VkCommandBuffer commandBuffer, VkBool32 coverageModulationTableEnable)
+    /// ```
+    unsafe fn set_coverage_modulation_table_enable_nv(
+        &self,
+        coverage_modulation_table_enable: bool,
+    ) -> () {
+        unsafe {
+            self.commands().cmd_set_coverage_modulation_table_enable_nv(
+                self.raw(),
+                coverage_modulation_table_enable,
+            )
+        }
+    }
+    /// ```c
+    /// void vkCmdSetCoverageModulationTableNV(VkCommandBuffer commandBuffer, uint32_t coverageModulationTableCount, float const* pCoverageModulationTable)
+    /// ```
+    unsafe fn set_coverage_modulation_table_nv(
+        &self,
+        coverage_modulation_table: &[float],
+    ) -> () {
+        unsafe {
+            self.commands().cmd_set_coverage_modulation_table_nv(
+                self.raw(),
+                coverage_modulation_table,
+            )
+        }
+    }
+    /// ```c
+    /// void vkCmdSetCoverageReductionModeNV(VkCommandBuffer commandBuffer, VkCoverageReductionModeNV coverageReductionMode)
+    /// ```
+    unsafe fn set_coverage_reduction_mode_nv(
+        &self,
+        coverage_reduction_mode: CoverageReductionModeNV,
+    ) -> () {
+        unsafe {
+            self.commands().cmd_set_coverage_reduction_mode_nv(
+                self.raw(),
+                coverage_reduction_mode,
+            )
+        }
+    }
+    /// ```c
+    /// void vkCmdSetCoverageToColorEnableNV(VkCommandBuffer commandBuffer, VkBool32 coverageToColorEnable)
+    /// ```
+    unsafe fn set_coverage_to_color_enable_nv(
+        &self,
+        coverage_to_color_enable: bool,
+    ) -> () {
+        unsafe {
+            self.commands().cmd_set_coverage_to_color_enable_nv(
+                self.raw(),
+                coverage_to_color_enable,
+            )
+        }
+    }
+    /// ```c
+    /// void vkCmdSetCoverageToColorLocationNV(VkCommandBuffer commandBuffer, uint32_t coverageToColorLocation)
+    /// ```
+    unsafe fn set_coverage_to_color_location_nv(
+        &self,
+        coverage_to_color_location: uint32_t,
+    ) -> () {
+        unsafe {
+            self.commands().cmd_set_coverage_to_color_location_nv(
+                self.raw(),
+                coverage_to_color_location,
+            )
+        }
+    }
+    /// ```c
+    /// void vkCmdSetDepthClampEnableEXT(VkCommandBuffer commandBuffer, VkBool32 depthClampEnable)
+    /// ```
+    unsafe fn set_depth_clamp_enable(
+        &self,
+        depth_clamp_enable: bool,
+    ) -> () {
+        unsafe {
+            self.commands().cmd_set_depth_clamp_enable(
+                self.raw(),
+                depth_clamp_enable,
+            )
+        }
+    }
+    /// ```c
+    /// void vkCmdSetDepthClipEnableEXT(VkCommandBuffer commandBuffer, VkBool32 depthClipEnable)
+    /// ```
+    unsafe fn set_depth_clip_enable(
+        &self,
+        depth_clip_enable: bool,
+    ) -> () {
+        unsafe {
+            self.commands().cmd_set_depth_clip_enable(
+                self.raw(),
+                depth_clip_enable,
+            )
+        }
+    }
+    /// ```c
+    /// void vkCmdSetDepthClipNegativeOneToOneEXT(VkCommandBuffer commandBuffer, VkBool32 negativeOneToOne)
+    /// ```
+    unsafe fn set_depth_clip_negative_one_to_one(
+        &self,
+        negative_one_to_one: bool,
+    ) -> () {
+        unsafe {
+            self.commands().cmd_set_depth_clip_negative_one_to_one(
+                self.raw(),
+                negative_one_to_one,
+            )
+        }
+    }
+    /// ```c
+    /// void vkCmdSetExtraPrimitiveOverestimationSizeEXT(VkCommandBuffer commandBuffer, float extraPrimitiveOverestimationSize)
+    /// ```
+    unsafe fn set_extra_primitive_overestimation_size(
+        &self,
+        extra_primitive_overestimation_size: float,
+    ) -> () {
+        unsafe {
+            self.commands().cmd_set_extra_primitive_overestimation_size(
+                self.raw(),
+                extra_primitive_overestimation_size,
+            )
+        }
+    }
+    /// ```c
+    /// void vkCmdSetLineRasterizationModeEXT(VkCommandBuffer commandBuffer, VkLineRasterizationModeEXT lineRasterizationMode)
+    /// ```
+    unsafe fn set_line_rasterization_mode(
+        &self,
+        line_rasterization_mode: LineRasterizationModeEXT,
+    ) -> () {
+        unsafe {
+            self.commands().cmd_set_line_rasterization_mode(
+                self.raw(),
+                line_rasterization_mode,
+            )
+        }
+    }
+    /// ```c
+    /// void vkCmdSetLineStippleEnableEXT(VkCommandBuffer commandBuffer, VkBool32 stippledLineEnable)
+    /// ```
+    unsafe fn set_line_stipple_enable(
+        &self,
+        stippled_line_enable: bool,
+    ) -> () {
+        unsafe {
+            self.commands().cmd_set_line_stipple_enable(
+                self.raw(),
+                stippled_line_enable,
+            )
+        }
+    }
+    /// ```c
+    /// void vkCmdSetLogicOpEnableEXT(VkCommandBuffer commandBuffer, VkBool32 logicOpEnable)
+    /// ```
+    unsafe fn set_logic_op_enable(
+        &self,
+        logic_op_enable: bool,
+    ) -> () {
+        unsafe {
+            self.commands().cmd_set_logic_op_enable(
+                self.raw(),
+                logic_op_enable,
+            )
+        }
+    }
+    /// ```c
+    /// void vkCmdSetPolygonModeEXT(VkCommandBuffer commandBuffer, VkPolygonMode polygonMode)
+    /// ```
+    unsafe fn set_polygon_mode(
+        &self,
+        polygon_mode: PolygonMode,
+    ) -> () {
+        unsafe {
+            self.commands().cmd_set_polygon_mode(
+                self.raw(),
+                polygon_mode,
+            )
+        }
+    }
+    /// ```c
+    /// void vkCmdSetProvokingVertexModeEXT(VkCommandBuffer commandBuffer, VkProvokingVertexModeEXT provokingVertexMode)
+    /// ```
+    unsafe fn set_provoking_vertex_mode(
+        &self,
+        provoking_vertex_mode: ProvokingVertexModeEXT,
+    ) -> () {
+        unsafe {
+            self.commands().cmd_set_provoking_vertex_mode(
+                self.raw(),
+                provoking_vertex_mode,
+            )
+        }
+    }
+    /// ```c
+    /// void vkCmdSetRasterizationSamplesEXT(VkCommandBuffer commandBuffer, VkSampleCountFlagBits rasterizationSamples)
+    /// ```
+    unsafe fn set_rasterization_samples(
+        &self,
+        rasterization_samples: SampleCountFlags,
+    ) -> () {
+        unsafe {
+            self.commands().cmd_set_rasterization_samples(
+                self.raw(),
+                rasterization_samples,
+            )
+        }
+    }
+    /// ```c
+    /// void vkCmdSetRasterizationStreamEXT(VkCommandBuffer commandBuffer, uint32_t rasterizationStream)
+    /// ```
+    unsafe fn set_rasterization_stream(
+        &self,
+        rasterization_stream: uint32_t,
+    ) -> () {
+        unsafe {
+            self.commands().cmd_set_rasterization_stream(
+                self.raw(),
+                rasterization_stream,
+            )
+        }
+    }
+    /// ```c
+    /// void vkCmdSetRepresentativeFragmentTestEnableNV(VkCommandBuffer commandBuffer, VkBool32 representativeFragmentTestEnable)
+    /// ```
+    unsafe fn set_representative_fragment_test_enable_nv(
+        &self,
+        representative_fragment_test_enable: bool,
+    ) -> () {
+        unsafe {
+            self.commands().cmd_set_representative_fragment_test_enable_nv(
+                self.raw(),
+                representative_fragment_test_enable,
+            )
+        }
+    }
+    /// ```c
+    /// void vkCmdSetSampleLocationsEnableEXT(VkCommandBuffer commandBuffer, VkBool32 sampleLocationsEnable)
+    /// ```
+    unsafe fn set_sample_locations_enable(
+        &self,
+        sample_locations_enable: bool,
+    ) -> () {
+        unsafe {
+            self.commands().cmd_set_sample_locations_enable(
+                self.raw(),
+                sample_locations_enable,
+            )
+        }
+    }
+    /// ```c
+    /// void vkCmdSetSampleMaskEXT(VkCommandBuffer commandBuffer, VkSampleCountFlagBits samples, VkSampleMask const* pSampleMask)
+    /// ```
+    unsafe fn set_sample_mask(
+        &self,
+        samples: SampleCountFlags,
+        sample_mask: *const SampleMask,
+    ) -> () {
+        unsafe {
+            self.commands().cmd_set_sample_mask(
+                self.raw(),
+                samples,
+                sample_mask,
+            )
+        }
+    }
+    /// ```c
+    /// void vkCmdSetShadingRateImageEnableNV(VkCommandBuffer commandBuffer, VkBool32 shadingRateImageEnable)
+    /// ```
+    unsafe fn set_shading_rate_image_enable_nv(
+        &self,
+        shading_rate_image_enable: bool,
+    ) -> () {
+        unsafe {
+            self.commands().cmd_set_shading_rate_image_enable_nv(
+                self.raw(),
+                shading_rate_image_enable,
+            )
+        }
+    }
+    /// ```c
+    /// void vkCmdSetTessellationDomainOriginEXT(VkCommandBuffer commandBuffer, VkTessellationDomainOrigin domainOrigin)
+    /// ```
+    unsafe fn set_tessellation_domain_origin(
+        &self,
+        domain_origin: TessellationDomainOrigin,
+    ) -> () {
+        unsafe {
+            self.commands().cmd_set_tessellation_domain_origin(
+                self.raw(),
+                domain_origin,
+            )
+        }
+    }
+    /// ```c
+    /// void vkCmdSetViewportSwizzleNV(VkCommandBuffer commandBuffer, uint32_t firstViewport, uint32_t viewportCount, VkViewportSwizzleNV const* pViewportSwizzles)
+    /// ```
+    unsafe fn set_viewport_swizzle_nv(
+        &self,
+        first_viewport: uint32_t,
+        viewport_swizzles: &[ViewportSwizzleNV],
+    ) -> () {
+        unsafe {
+            self.commands().cmd_set_viewport_swizzle_nv(
+                self.raw(),
+                first_viewport,
+                viewport_swizzles,
+            )
+        }
+    }
+    /// ```c
+    /// void vkCmdSetViewportWScalingEnableNV(VkCommandBuffer commandBuffer, VkBool32 viewportWScalingEnable)
+    /// ```
+    unsafe fn set_viewport_w_scaling_enable_nv(
+        &self,
+        viewport_w_scaling_enable: bool,
+    ) -> () {
+        unsafe {
+            self.commands().cmd_set_viewport_w_scaling_enable_nv(
+                self.raw(),
+                viewport_w_scaling_enable,
+            )
+        }
+    }
+}

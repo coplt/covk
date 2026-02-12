@@ -1,0 +1,29 @@
+[package]
+edition = "2024"
+name = "covk_sys"
+version = "0.1.0-1.4.345"
+
+[features]
+default = ["loaded"]
+linked = []
+loaded = ["libloading"]
+
+[dependencies]
+libloading = { workspace = true, optional = true }
+thiserror = "2"
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+
+[dev-dependencies]
+anyhow = { workspace = true }
+winit = { workspace = true }
+raw-window-handle = { workspace = true }
+log = { workspace = true }
+env_logger = { workspace = true }
+zstd = { workspace = true }
+basis-universal = { workspace = true }
+gpu-allocator = { workspace = true }
+ash = { workspace = true }
+glam = { workspace = true }
