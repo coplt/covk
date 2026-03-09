@@ -1,7 +1,7 @@
 [package]
 edition = "2024"
 name = "covk"
-version = "0.1.1-1.4.345"
+version = "0.1.2-1.4.345"
 description = "Unsafe vulkan bindings for Rust"
 authors = ["2A5F <U2A5F@outlook.com>"]
 repository = "https://github.com/coplt/covk"

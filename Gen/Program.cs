@@ -25,7 +25,7 @@ var symbols = Symbols.Load(doc);
 var misc_dir = Path.Join(cur_dir, "./.misc/");
 Directory.CreateDirectory(misc_dir);
 
-var version = "0.1.1";
+var version = "0.1.2";
 var target_version_path = Path.Join(misc_dir, "./target_version.txt");
 await File.WriteAllTextAsync(target_version_path, symbols.VulkanVersion, Encoding.UTF8);
 

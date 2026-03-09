@@ -1,5 +1,6 @@
 #![no_std]
 #![macro_use]
+#![cfg_attr(docsrs, feature(doc_cfg))]
 #![allow(unpredictable_function_pointer_comparisons)]
 #![allow(non_upper_case_globals)]
 #![allow(non_camel_case_types)]
