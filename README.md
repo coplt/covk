@@ -8,17 +8,17 @@ Unsafe Vulkan bindings for Rust
 - `no_std` support
 - Vulkan `1.0` `1.1` `1.2` `1.3` `1.4`
 
-- `covk`
-
-  [![Crates.io Version](https://img.shields.io/crates/v/covk.svg)](https://crates.io/crates/covk)
-  [![Documentation](https://docs.rs/covk/badge.svg)](https://docs.rs/covk)
-
-  Original bindings, pure vulkan style.
-
 - `covk_sys`
 
   [![Crates.io Version](https://img.shields.io/crates/v/covk_sys.svg)](https://crates.io/crates/covk_sys)
   [![Documentation](https://docs.rs/covk_sys/badge.svg)](https://docs.rs/covk_sys)
+
+  Original bindings, pure vulkan style.
+
+- `covk`
+
+  [![Crates.io Version](https://img.shields.io/crates/v/covk.svg)](https://crates.io/crates/covk)
+  [![Documentation](https://docs.rs/covk/badge.svg)](https://docs.rs/covk)
 
   - Rust style wrapping
   - Prelude
