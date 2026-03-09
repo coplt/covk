@@ -335,7 +335,7 @@ dependencies = [
 
 [[package]]
 name = "covk"
-version = "0.1.0-1.4.345"
+version = "0.1.1-1.4.345"
 dependencies = [
  "anyhow",
  "ash",
@@ -354,7 +354,7 @@ dependencies = [
 
 [[package]]
 name = "covk_sys"
-version = "0.1.0-1.4.345"
+version = "0.1.1-1.4.345"
 dependencies = [
  "anyhow",
  "ash",

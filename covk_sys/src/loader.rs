@@ -98,17 +98,20 @@ impl Entry {
     /// Load entry points linked at compile time
     #[cfg(feature = "linked")]
     #[cfg_attr(docsrs, doc(cfg(feature = "linked")))]
-    pub const fn linked() -> Arc<Self> {
-        Self {
-            vkGetInstanceProcAddr: vkGetInstanceProcAddr,
+    pub fn linked() -> Arc<Self> {
+        Arc::new(Self {
+            vkGetInstanceProcAddr,
             _lib: None,
-        }
+        })
     }
 }
 
 #[cfg(feature = "linked")]
-extern "C" {
-    fn vkGetInstanceProcAddr(instance: VkInstance, pName: *const c_char) -> PFN_vkVoidFunction;
+unsafe extern "system" {
+    unsafe fn vkGetInstanceProcAddr(
+        instance: VkInstance,
+        pName: *const c_char,
+    ) -> PFN_vkVoidFunction;
 }
 
 #[cfg(feature = "loaded")]
