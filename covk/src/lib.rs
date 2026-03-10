@@ -18,6 +18,7 @@ extern crate alloc;
 /// ```
 /// # use ::core::ffi::CStr;
 /// # use covk::e;
+/// # use covk::ExtName;
 /// let ext_name: ExtName<'_> = e!("VK_EXT_test");
 /// assert_eq!(
 ///     ext_name.as_cstr(),
