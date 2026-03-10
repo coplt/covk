@@ -2,6 +2,7 @@
 
 [![LICENSE](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE-MIT)
 [![MSRV](https://img.shields.io/badge/rustc-1.93.0+-ab6000.svg)](https://blog.rust-lang.org/2023/04/20/Rust-1.93.0.html)
+[![Build](https://github.com/coplt/covk/actions/workflows/build.yml/badge.svg)](https://github.com/coplt/covk/actions/workflows/build.yml)
 
 Unsafe Vulkan bindings for Rust
 
