@@ -733,7 +733,7 @@ impl RenderContext {
     fn new(window: &Window) -> anyhow::Result<Self> {
         unsafe {
             let inst = Instance::new()?;
-            let surface = match window.window_handle()?.as_raw() {
+            let surface: hnd::SurfaceKHR = match window.window_handle()?.as_raw() {
                 #[cfg(windows)]
                 RawWindowHandle::Win32(hnd) => inst.sf_win32.create_win32surface(
                     &vk::new::Win32SurfaceCreateInfoKHR {
@@ -741,10 +741,9 @@ impl RenderContext {
                         hwnd: hnd.hwnd.get(),
                     }
                     .new(),
-                )?,
+                )?.hnd(&inst.sf),
                 _ => Err(anyhow::anyhow!("Platform not support"))?,
-            }
-            .hnd(&inst.sf);
+            };
             let device = Device::new(&inst, &surface)?;
             let allocator = Allocator::new(&inst, &device)?;
             let swap_chain = SwapChainContext::new(&device, &surface)?;
