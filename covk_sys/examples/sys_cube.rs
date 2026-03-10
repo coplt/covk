@@ -1406,6 +1406,7 @@ impl Surface {
         unsafe {
             Ok(Arc::new(Self {
                 hnd: match window.window_handle()?.as_raw() {
+                    #[cfg(windows)]
                     RawWindowHandle::Win32(hnd) => {
                         let mut surface = vk::VkSurfaceKHR::null();
                         let info = vk::VkWin32SurfaceCreateInfoKHR {

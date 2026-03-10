@@ -734,6 +734,7 @@ impl RenderContext {
         unsafe {
             let inst = Instance::new()?;
             let surface = match window.window_handle()?.as_raw() {
+                #[cfg(windows)]
                 RawWindowHandle::Win32(hnd) => inst.sf_win32.create_win32surface(
                     &vk::new::Win32SurfaceCreateInfoKHR {
                         hinstance: Default::default(),
